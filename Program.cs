@@ -9,7 +9,7 @@ namespace atbash
     internal class Program
     {
         static void Main(string[] args)
-        {
+        { 
         }
 
         static string atbash(string txt)
@@ -23,14 +23,19 @@ namespace atbash
             Dictionary<char, char> map = new Dictionary<char, char>();
             string newtxt = "";
 
-            for (int i = 0; i < chars.Length; i++)
-            { reverse[i] = chars[i]; }
+            int cnt = 0;
+            for (int i = chars.Length - 1; i >= 0; i--)
+            { reverse[cnt] = chars[i];
+                cnt++;
+            }
 
             for (int j = 0; j < chars.Length; j++)
             { map[chars[j]] = reverse[j]; }
 
             foreach (char c in txt)
-                newtxt += map[c];
+                if (map.ContainsKey(c))
+                { newtxt += map[c]; }
+            else { newtxt += c; }
             
             return newtxt;
             }
