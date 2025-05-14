@@ -8,11 +8,15 @@ namespace atbash
 {
     internal class Program
     {
-        static int WordCounter(string[] message, string[] words)
+
+
+        static int WordCounter(string message, string[] words)
         {
+            string[] message1 = message.Split(' ');
+
             int Counter = 0;
 
-            foreach (string word in message)
+            foreach (string word in message1)
             {
                 foreach (string word2 in words)
                 {
@@ -21,7 +25,6 @@ namespace atbash
                         Counter++;
                     }
                 }
-                
             }
             return Counter;
         }
