@@ -9,7 +9,10 @@ namespace atbash
     internal class Program
     {
         static void Main(string[] args)
-        { 
+        {
+            string txt = atbash("Lfi ulixvh ziv kivkzirmt uli z nzqli zggzxp lm gsv Arlmrhg vmvnb.\r\nGsv ilxpvg fmrgh ziv ivzwb zmw dzrgrmt uli gsv hrtmzo.\r\nYlnyh szev yvvm kozxvw mvzi pvb olxzgrlmh.\r\nMfpsyz urtsgvih ziv hgzmwrmt yb uli tilfmw rmurogizgrlm.\r\nGsv zggzxp droo yv hfwwvm zmw hgilmt -- gsvb dlm’g hvv rg xlnrmt.\r\nDv nfhg hgzb srwwvm zmw pvvk gsv kozm hvxivg fmgro gsv ozhg nlnvmg.\r\nErxglib rh mvzi. Hgzb ivzwb.\r\n");
+            int num = WordCounter("bomb, nukhba, fighter, rocket, secret");
+            output(txt, num);
         }
 
         static string atbash(string txt)
@@ -39,6 +42,28 @@ namespace atbash
             
             return newtxt;
             }
+
+        static void output(string txt, int num)
+        {
+            string level = "";
+            if (num < 1)
+            {  level = "nothing"; }
+            else if (num < 6)
+            {
+                 level = "WARNING";
+            }
+            else if (num < 11)
+            {
+                 level = "DANGER!";
+            }
+            else
+            {
+                 level = "ULTRA ALERT!";
+            }
+            Console.WriteLine(level);
+            Console.WriteLine($"Decrypted text: {txt}");
+            Console.WriteLine($"Number of alerts: {num}.");
+        }
         }
     }
 
