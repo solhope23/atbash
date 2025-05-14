@@ -11,5 +11,11 @@ namespace atbash
         static void Main(string[] args)
         {
         }
+        static void hallo()
+        { Console.WriteLine("hallo"); }
+
+        static void shlomo()
+        { Console.WriteLine("mamatsav shlomo"); }
+
     }
 }
