@@ -10,6 +10,16 @@ namespace atbash
     {
         static int WordCounter(string[] message, string[] words)
         {
+            int Counter = 0;
+
+            foreach (string word in message)
+            {
+                foreach (string word2 in words)
+                {
+
+                }
+                
+            }
 
         }
 
