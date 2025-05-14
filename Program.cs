@@ -8,6 +8,12 @@ namespace atbash
 {
     internal class Program
     {
+        static int WordCounter(string[] message, string[] words)
+        {
+
+        }
+
+
         static void Main(string[] args)
         {
         }
