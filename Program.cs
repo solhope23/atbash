@@ -16,11 +16,14 @@ namespace atbash
             {
                 foreach (string word2 in words)
                 {
-
+                    if (word == word2)
+                    {
+                        Counter++;
+                    }
                 }
                 
             }
-
+            return Counter;
         }
 
 
